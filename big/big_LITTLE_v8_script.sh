@@ -21,7 +21,7 @@ else
 echo "Started at $(date)"
 ./build/ARM/gem5.opt -d $DIR configs/example/fs.py --caches --l2cache --big-little \
     --cpu-type-big=A57 --cpu-type-little=A53 \
-    --cpu-clock-big=2.1GHz --cpu-clock-little=1.8GHz \
+    --cpu-clock-big=2.1GHz --cpu-clock-little=1.5GHz \
     --num-cpus-big=$1 --num-cpus-little=$2 \
     --l1d_size_big=32kB --l1i_size_big=48kB \
     --l1d_assoc_big=2 --l1i_assoc_big=3 \
