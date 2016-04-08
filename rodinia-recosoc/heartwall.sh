@@ -3,7 +3,7 @@
 SCHED=dynamic
 TH=8
 
-cd /benchmark/bin/ 
+cd /rodinia/bin/ 
 echo "Reset stats and start $(basename $0 .rcS)"
 /sbin/m5 resetstats
 echo "Job launched"
