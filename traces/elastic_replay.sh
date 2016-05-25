@@ -2,14 +2,16 @@
 #!/bin/sh
 
 CPU=$1
-# KERN=$2
-# DTB=$3
-# DISK=$4
-DIR=$2
-TRACE=$3
+KERN=$2
+DTB=$3
+DISK=$4
+DIR=$5
+TRACE=$6
 
-# --kernel $KERN --machine-type VExpress_EMM --disk-image $DISK --dtb-filename $DTB \
+
 echo "Started at $(date)"
+
+#--kernel $KERN --machine-type VExpress_EMM --disk-image $DISK --dtb-filename $DTB \
 
 ./build/ARM/gem5.fast -d $DIR configs/example/etrace_replay.py -n $CPU \
     --cpu-type trace --caches \
