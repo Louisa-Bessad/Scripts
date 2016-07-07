@@ -8,8 +8,8 @@ echo "change directory"
 cd /
 echo "Reset stats and start $(basename $0 .rcS)"
 /sbin/m5 resetstats
-echo "Job launched"
-./prout
-echo "Jod done"
+echo "Job launched at $(date)"
+./matrix
+echo "Jod done at $(date)"
 /sbin/m5 exit
 

@@ -1,15 +1,21 @@
 #!/bin/sh
 
-# /sbin/m5 checkpoint 0 0
-# /sbin/m5 checkpoint 1000 2000
+SCHED=static
+TH=4
+
+export OMP_NUM_THREADS=$TH
+export OMP_SCHEDULE=$SCHED
+
 
 /sbin/m5 checkpoint
 echo "change directory"
-cd /
+cd /elastic/bin
 echo "Reset stats and start $(basename $0 .rcS)"
 /sbin/m5 resetstats
 echo "Job launched"
-./prout
-echo "Jod done"
+
+./nn /elastic/data/nn/filelist.txt 5 30 90 $TH
+
+echo "Job done"
 /sbin/m5 exit
 
