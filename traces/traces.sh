@@ -6,7 +6,7 @@ CPU=$1
 KERN=~/Big_LITTLE/Architectures/binaries/linux-arm-gem5/vmlinux
 DTB=$2
 # DISK=$5
-DISK=~/Big_LITTLE/Architectures/disks/linux-aarch32-ael.img
+DISK=~/Big_LITTLE/Architectures/disks/linux-aarch32-ael-traces.img
 DIR=$3
 
 echo "Started at $(date)"
